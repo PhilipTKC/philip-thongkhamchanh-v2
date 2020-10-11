@@ -1,1 +1,1 @@
-export default class NotFound {}
+export class NotFound {}

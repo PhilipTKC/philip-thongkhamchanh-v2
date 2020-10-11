@@ -1,21 +1,21 @@
-export type ProjectResponse = {
+export interface ProjectResponse {
   data: {
     title: string;
     description: string;
     url: string;
     labels: string[];
   };
-};
+}
 
-export type ToolsResponse = {
+export interface ToolsResponse {
   title: string;
   url: string;
   src: string;
-};
+}
 
 type FaunaResponse = ProjectResponse[] | ToolsResponse[];
 
-export default class FaunaService {
+export class FaunaService {
   private readonly baseURL = "https://thongkhamchanh.me";
 
   private readonly basePath = ".netlify/functions";

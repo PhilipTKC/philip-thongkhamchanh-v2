@@ -1,6 +1,7 @@
-import { customElement, bindable } from "aurelia-framework";
+import { customElement } from "aurelia-framework";
+
 @customElement("tools-list")
-export default class ToolsList {
+export class ToolsList {
   tools: any;
 
   attached(): void {

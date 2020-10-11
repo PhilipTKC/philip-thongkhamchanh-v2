@@ -1,7 +1,7 @@
 import { RouteConfig } from "aurelia-router";
 import { PLATFORM } from "aurelia-pal";
 
-export const routes: RouteConfig[] = [
+const routes: RouteConfig[] = [
   {
     moduleId: PLATFORM.moduleName("pages/home"),
     name: "home",
@@ -22,4 +22,4 @@ export const routes: RouteConfig[] = [
   },
 ];
 
-export default routes;
+export { routes };

@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Aurelia } from "aurelia-framework";
 import { PLATFORM } from "aurelia-pal";
 import * as environment from "../config/environment.json";
