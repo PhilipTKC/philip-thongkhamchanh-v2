@@ -1,0 +1,41 @@
+<template>
+  <require from="./shared.css"></require>
+  <require from="resources/elements/project-card"></require>
+
+  <div class="au-animate animate-fade-in animate-fade-out">
+    <div class="h-full min-h-screen">
+      <div class="p-8 text-xs sm:text-lg">
+        <ol>
+          <li class="inline-block">
+            <a class="breadcrumb" href="/">
+              <i class="far fa-home-lg-alt mr-2"></i> Home
+            </a>
+          </li>
+          <a><i class="far fa-angle-right"></i></a>
+          <li class="inline-block">
+            <a class="breadcrumb breadcrumb--between" href="projects">
+              <i class="far fa-briefcase mr-2"></i> Projects
+            </a>
+          </li>
+          <a><i class="far fa-angle-right"></i></a>
+          <li class="inline-block">
+            <a class="breadcrumb breadcrumb--end" href="projects/customers">
+              <i class="far fa-users mr-2"></i> Customers
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <div class="flex bg-yellow-200">
+        <div class="m-auto">
+          <div class="my-12">
+            <h1 class="header">
+              Customer Projects
+            </h1>
+          </div>
+          <project-card projects.bind="projects"></project-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

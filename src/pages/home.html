@@ -1,0 +1,32 @@
+<template>
+  <require from="resources/elements/hero"></require>
+  <require from="resources/elements/navigation-links.html"></require>
+  <require from="resources/elements/tools-list"></require>
+  <require from="resources/elements/banner.html"></require>
+  <require from="resources/elements/contact.html"></require>
+
+  <div class="au-animate animate-fade-in-quick animate-fade-out">
+    <div class="bg-yellow-200 flex h-full overflow-hidden relative">
+      <div
+        class="lg:pb-28 m-auto md:pb-20 pb-12 relative sm:pb-16 xl:pb-32"
+      >
+        <banner message="Notice: Website is being revamped."></banner>
+
+        <hero></hero>
+
+        <navigation-links></navigation-links>
+
+        <contact></contact>
+
+        <div class="my-8">
+          <p
+            class="font-black text-center text-md text-gray-700 tracking-tight text-2xl"
+          >
+            My Tech Stack
+          </p>
+          <tools-list></tools-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
