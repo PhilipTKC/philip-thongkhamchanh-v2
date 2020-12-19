@@ -21,10 +21,7 @@
     "faunadb": "^4.0.0",
     "nprogress": "^0.2.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "tippy.js": "^6.2.4"
-  },
-  "description": "",
-  "devDependencies": {
+    "tippy.js": "^6.2.4",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@types/lodash": "^4.14.117",
@@ -77,6 +74,9 @@
     "webpack-bundle-analyzer": "^3.0.4",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
+  },
+  "description": "",
+  "devDependencies": {
   },
   "engines": {
     "node": ">=8.9.0"
