@@ -1,8 +1,6 @@
-import { customElement } from "aurelia-framework";
 import tippy from "tippy.js";
 
-@customElement("hero")
-export class Hero {
+export class HeroCustomElement {
   attached(): void {
     tippy(document.querySelectorAll(".tjs"));
   }

@@ -1,7 +1,4 @@
-import { customElement } from "aurelia-framework";
-
-@customElement("tools-list")
-export class ToolsList {
+export class ToolsListCustomElement {
   tools: any;
 
   attached(): void {

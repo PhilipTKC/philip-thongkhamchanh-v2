@@ -161,11 +161,11 @@ module.exports = (
           issuer: [{ not: [{ test: /\.html$/i }] }],
           use: extractCss
             ? [
-                {
-                  loader: MiniCssExtractPlugin.loader,
-                },
-                ...cssRules,
-              ]
+              {
+                loader: MiniCssExtractPlugin.loader,
+              },
+              ...cssRules,
+            ]
             : ["style-loader", ...cssRules],
         },
         {
@@ -261,7 +261,11 @@ module.exports = (
       ),
       ...when(
         !tests,
-        new CopyWebpackPlugin({ patterns: [{ from: "static", to: outDir }] })
+        new CopyWebpackPlugin({
+          patterns: [
+            { from: "static", to: outDir, globOptions: { ignore: [".*"] } },
+          ],
+        })
       ),
       ...when(analyze, new BundleAnalyzerPlugin()),
       new CleanWebpackPlugin({

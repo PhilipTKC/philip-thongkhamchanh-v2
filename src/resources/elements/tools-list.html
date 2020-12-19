@@ -1,20 +1,20 @@
 <template>
   <div>
     <ul
-      class="grid grid-cols-1 gap-5 lg:grid-cols-4 mt-12 sm:gap-6 sm:grid-cols-2 md:text-center px-4 text-left"
+      class="grid grid-cols-1 gap-5 px-4 mt-12 text-left lg:grid-cols-4 sm:gap-6 sm:grid-cols-2 md:text-center"
     >
       <li
-        class="col-span-1 flex items-center bg-yellow-100 rounded-md shadow-sm overflow-hidden p-1"
+        class="flex items-center col-span-1 p-1 overflow-hidden bg-yellow-100 rounded-md shadow-sm"
         repeat.for="tool of tools"
       >
         <div
-          class="flex-shrink-0 flex items-center justify-center w-16 h-16 text-white text-sm leading-5 font-medium"
+          class="flex items-center justify-center flex-shrink-0 w-16 h-16 text-sm font-medium leading-5 text-white"
         >
           <img class="w-12 h-12" src="${tool.src}" alt="${tool.title}" />
         </div>
         <div class="flex-1 px-4 py-2 truncate">
           <a
-            class="text-gray-900 font-bold hover:text-gray-600 transition ease-in-out duration-150"
+            class="font-bold text-gray-900 transition duration-150 ease-in-out hover:text-gray-600"
             href="${tool.url}"
           >
             ${tool.title}
@@ -22,19 +22,19 @@
         </div>
       </li>
       <li
-        class="col-span-1 flex items-center bg-yellow-100 rounded-md shadow-sm overflow-hidden p-1"
+        class="flex items-center col-span-1 p-1 overflow-hidden bg-yellow-100 rounded-md shadow-sm"
       >
         <div
-          class="flex-shrink-0 flex items-center justify-center w-16 h-16 text-white text-sm leading-5 font-medium"
+          class="flex items-center justify-center flex-shrink-0 w-16 h-16 text-sm font-medium leading-5 text-white"
         >
-          <i class="far fa-layer-group text-4xl text-gray-600"></i>
+          <i class="text-4xl text-gray-600 far fa-layer-group"></i>
         </div>
         <div class="flex-1 px-4 py-2 truncate">
           <a
-            class="text-gray-900 font-bold hover:text-gray-600 transition ease-in-out duration-150"
+            class="font-bold text-gray-900 transition duration-150 ease-in-out hover:text-gray-600"
             href="#"
           >
-            View More <i class="far fa-long-arrow-right ml-3"></i>
+            View More <i class="ml-3 far fa-long-arrow-right"></i>
           </a>
         </div>
       </li>

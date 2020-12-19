@@ -1,6 +1,5 @@
-import { customElement, bindable } from "aurelia-framework";
+import { bindable } from "aurelia-framework";
 
-@customElement("project-card")
-export class ProjectCard {
+export class ProjectCardCustomElement {
   @bindable projects: any;
 }
