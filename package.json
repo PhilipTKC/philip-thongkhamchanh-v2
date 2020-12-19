@@ -16,12 +16,14 @@
     "aurelia-pal": "^1.8.2",
     "aurelia-router": "^1.7.1",
     "aurelia-store": "^1.6.0",
-    "autoprefixer": "^9.8.6",
     "dayjs": "^1.9.7",
     "faunadb": "^4.0.0",
     "nprogress": "^0.2.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "tippy.js": "^6.2.4",
+    "tippy.js": "^6.2.4"
+  },
+  "description": "",
+  "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@types/lodash": "^4.14.117",
@@ -35,6 +37,7 @@
     "aurelia-testing": "^1.0.0",
     "aurelia-tools": "^2.0.0",
     "aurelia-webpack-plugin": "^3.0.0",
+    "autoprefixer": "^9.8.6",
     "brotli-webpack-plugin": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.3",
@@ -75,9 +78,6 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
   },
-  "description": "",
-  "devDependencies": {
-  },
   "engines": {
     "node": ">=8.9.0"
   },
@@ -91,7 +91,7 @@
     "analyze": "webpack --env.production --analyze",
     "build": "webpack --env.production --extractCss --optimize-minimize",
     "build:dev": "webpack --extractCss",
-    "tailwind": "npx tailwindcss@latest build ./src/tailwind.css -o ./src/app.css",
+    "tailwind": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./src/app.css",
     "start": "webpack-dev-server --extractCss"
   },
   "version": "0.1.0"
