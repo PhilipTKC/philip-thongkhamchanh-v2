@@ -1,14 +1,14 @@
-import { PLATFORM } from "aurelia-pal";
-import { autoinject } from "aurelia-framework";
+import { autoinject, PLATFORM } from "aurelia-framework";
 import { RouterConfiguration } from "aurelia-router";
 import { routes } from "routes";
 
 import "./css/app.css";
+
 import "./css/animation.css";
-import "./css/nprogress.css";
 import "./css/custom-anim.css";
+import "./css/nprogress.css";
 import "./css/shared.css";
-import "tippy.js/dist/tippy.css";
+
 @autoinject
 export class App {
   configureRouter(configuration: RouterConfiguration): void {

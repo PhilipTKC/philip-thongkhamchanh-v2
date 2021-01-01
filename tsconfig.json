@@ -5,6 +5,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

@@ -8,19 +8,13 @@
   ],
   "dependencies": {
     "aurelia-animator-css": "^1.0.4",
-    "aurelia-bootstrapper": "^2.3.2",
-    "aurelia-configuration": "^2.0.0",
-    "aurelia-dependency-injection": "^1.5.2",
-    "aurelia-event-aggregator": "^1.0.3",
+    "aurelia-bootstrapper": "^2.3.3",
     "aurelia-framework": "^1.3.1",
-    "aurelia-pal": "^1.8.2",
     "aurelia-router": "^1.7.1",
-    "aurelia-store": "^1.6.0",
     "dayjs": "^1.9.8",
     "faunadb": "^4.0.0",
     "nprogress": "^0.2.0",
-    "tailwindcss": "^2.0.2",
-    "tippy.js": "^6.2.7"
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.117",

@@ -21,17 +21,14 @@ export class FaunaService {
   private readonly basePath = ".netlify/functions";
 
   async queryIndex(index: string): Promise<FaunaResponse> {
-    const products = await fetch(
-      `${this.baseURL}/${this.basePath}/query-index`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ index }),
-      }
-    ).then((response) => response.json());
+    const items = await fetch(`${this.baseURL}/${this.basePath}/query-index`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ index }),
+    }).then((response) => response.json());
 
-    return (products as any).data as FaunaResponse;
+    return (items as any).data as FaunaResponse;
   }
 }

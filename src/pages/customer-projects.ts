@@ -1,6 +1,6 @@
 import { FaunaService, ProjectResponse } from "services/fauna";
 import { autoinject } from "aurelia-framework";
-import * as nProgress from "nprogress";
+import nProgress from "nprogress";
 
 @autoinject
 export class CustomerProjects {
