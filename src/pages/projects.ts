@@ -10,7 +10,6 @@ export class Projects {
 
   async activate(): Promise<void> {
     nProgress.start();
-    //
   }
 
   attached(): void {

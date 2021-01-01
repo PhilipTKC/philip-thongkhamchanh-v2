@@ -29,12 +29,10 @@ const cssRules = [
   {
     loader: "postcss-loader",
     options: {
-      plugins: () => [
-        require("tailwindcss"),
-        require("autoprefixer")(),
-        require("cssnano")(),
-      ],
-    },
+      postcssOptions: {
+        plugins: ['autoprefixer', 'cssnano', 'tailwindcss']
+      }
+    }
   },
 ];
 

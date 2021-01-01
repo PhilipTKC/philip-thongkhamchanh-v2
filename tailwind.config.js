@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["Varela", ...defaultTheme.fontFamily.sans],
       },
     },
   },
