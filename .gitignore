@@ -39,4 +39,4 @@ node_modules
 # Local Netlify folder
 .netlify
 
-src/app.css
+src/css/app.css
