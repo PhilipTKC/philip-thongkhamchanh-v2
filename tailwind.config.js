@@ -1,20 +1,14 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    enabled: process.env.NETLIFY === "true",
-    content: ["./src/**/*.html", "./src/**/*.ts"],
-    options: {
-      whitelist: [/nprogress/, /animate/],
-    },
-  },
+  content: ["./src/**/*.html"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Varela", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
-  },
-  variants: {},
-  plugins: [],
-};
+  }
+}

@@ -1,19 +1,24 @@
-import { autoinject } from "aurelia-framework";
-import { FaunaService, ProjectResponse } from "services/fauna";
-import nProgress from "nprogress";
+import { IRouteableComponent } from "@aurelia/router";
 
-@autoinject
-export class Projects {
-  private projects: ProjectResponse[];
+import { GithubService, IGithubService } from "../services/github";
+import { Repositories } from "../common/interfaces";
 
-  constructor(private readonly fauna: FaunaService) {}
+import { AnimationHooks } from "../lifecycle-hooks/animation-hooks";
 
-  async activate(): Promise<void> {
-    nProgress.start();
-  }
+export class Projects implements IRouteableComponent {
 
-  attached(): void {
-    window.scroll(0, 0);
-    nProgress.done();
-  }
+    static dependencies = [AnimationHooks];
+
+    private repositories: Repositories;
+
+    constructor(@IGithubService private readonly github: GithubService) { }
+
+    async loading() {
+        this.repositories = await this.github.retrieveRepositories('PhilipTKC');
+
+        this.repositories = this.repositories.sort((a, b) => (a.archived > b.archived) ? 1 : -1);
+
+        console.log(this.repositories);
+
+    }
 }
