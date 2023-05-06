@@ -82,7 +82,7 @@ module.exports = function (env, { analyze }) {
       new HtmlWebpackPlugin({ template: 'index.html' }),
       new CopyWebpackPlugin({
         patterns: [
-          { from: "static", to: outDir, globOptions: { ignore: [".*"] } },
+          { from: "static", to: "dist", globOptions: { ignore: [".*"] } },
         ],
       }),
       new Dotenv({
