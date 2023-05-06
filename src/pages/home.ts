@@ -1,5 +1,6 @@
+import anime from "animejs";
+import { AnimationHooks } from "../lifecycle-hooks/animation-hooks";
+
 export class Home {
-  attached(): void {
-    window.scroll(0, 0);
-  }
+    static dependencies = [AnimationHooks];
 }

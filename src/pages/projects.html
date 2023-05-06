@@ -1,47 +1,46 @@
-<template>
-  <div class="au-animate animate-fade-in animate-fade-out">
-    <div class="h-full min-h-screen">
-      <div class="p-8 text-xs sm:text-lg">
-        <ol>
-          <li class="inline-block">
-            <a class="breadcrumb" href="/">
-              <i class="mr-2 far fa-home-lg-alt"></i> Home
+<div class="p-8 text-xs sm:text-lg">
+    <ol>
+        <li class="inline-block">
+            <a class="mr-3 text-indigo-400 transition hover:text-indigo-500" load="/">
+                <i class="mr-2 fa-solid fa-home-lg-alt"></i> Home
             </a>
-          </li>
-          <a><i class="far fa-angle-right"></i></a>
-          <li class="inline-block">
-            <a class="breadcrumb breadcrumb--end" href="projects">
-              <i class="mr-2 far fa-briefcase"></i> Projects
+        </li>
+        <a><i class="text-white fa-solid fa-angle-right"></i></a>
+        <li class="inline-block">
+            <a class="mx-3 text-indigo-400 transition hover:text-indigo-500" load="/projects">
+                <i class="mr-2 fa-solid fa-briefcase"></i> Projects
             </a>
-          </li>
-        </ol>
-      </div>
+        </li>
+    </ol>
+</div>
 
-      <div class="flex">
-        <div class="m-auto">
-          <div class="my-12">
-            <h1 class="header">
-              Personal Projects
-            </h1>
-            <h1
-              class="text-xl font-semibold tracking-wide text-center text-gray-700 cursor-pointer hover:text-yellow-400">
-              <a href="https://github.com/PhilipTKC">
-                View more on Github <i class="fab fa-github"></i>
-              </a>
-            </h1>
-          </div>
-          <project-card projects.bind="projects"></project-card>
-          <div class="my-12">
-            <h1
-              class="text-xl font-semibold tracking-tight text-center text-gray-500 cursor-pointer hover:text-yellow-400">
-              <a href="projects/customers">
-                Looking for customer projects?
-                <i class="far fa-long-arrow-right"></i>
-              </a>
-            </h1>
-          </div>
+<div class="grid grid-cols-1 gap-4 p-8 md:grid-cols-2">
+    <div repeat.for="repository of repositories"
+        class="border rounded-lg shadow-lg ${repository.archived ? 'bg-gray-50' : 'bg-white'}">
+        <div>
+            <div class="flex justify-center w-full h-48 p-8 text-center">
+                <div>
+                    <a href.bind="repository.html_url" external target="_blank"
+                        class="font-semibold tracking-wider text-gray-500 transition duration-500 hover:text-indigo-500">
+                        ${repository.name}
+                        <i class="ml-2 text-yellow-300 fa-solid fa-box-archive" if.bind="repository.archived"></i>
+                        <i class="ml-2 text-green-300 fa-solid fa-check" if.bind="!repository.archived"></i>
+                    </a>
+                    <p if.bind="repository.description" class="text-sm text-gray-400">${repository.description}</p>
+                    <div class="my-2">
+                        <span repeat.for="topic of repository.topics"
+                            class="inline-block p-1 m-1 text-xs text-blue-600 bg-blue-100 rounded-lg select-none">
+                            ${topic}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center p-2 border-t">
+                <span repeat.for="language of repository.languages | objectKeys"
+                    class="inline-block p-2 m-2 text-xs text-gray-600 bg-gray-100 rounded-lg select-none">
+                    ${language}
+                </span>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</template>
+</div>
